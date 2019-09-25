@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('PGDB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,11 +66,41 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => env('PGDB_HOST', '127.0.0.1'),
+            'port' => env('PGDB_PORT', '5432'),
+            'database' => env('PGDB_DATABASE', 'forge'),
+            'username' => env('PGDB_USERNAME', 'forge'),
+            'password' => env('PGDB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'equip',
+            'sslmode' => 'prefer',
+        ],
+
+        'pgsql_pgdbs' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('PGDB_pgDBS_HOST', '127.0.0.1'),
+            'port' => env('PGDB_pgDBS_PORT', '5432'),
+            'database' => env('PGDB_pgDBS_DATABASE', 'forge'),
+            'username' => env('PGDB_pgDBS_USERNAME', 'forge'),
+            'password' => env('PGDB_pgDBS_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'public',
+            'sslmode' => 'prefer',
+        ],
+
+        'pgsql_webdb' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('PGDB_WebDB_HOST', '127.0.0.1'),
+            'port' => env('PGDB_WebDB_PORT', '5432'),
+            'database' => env('PGDB_WebDB_DATABASE', 'forge'),
+            'username' => env('PGDB_WebDB_USERNAME', 'forge'),
+            'password' => env('PGDB_WebDB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,

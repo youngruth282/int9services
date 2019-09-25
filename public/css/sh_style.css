@@ -1,0 +1,97 @@
+html, body{
+    font-family:微軟正黑體;
+}
+
+.name-caret {
+        color: #8142ca;
+        font-weight: 700;
+}
+
+.bible_t{
+    color: #8142ca;
+    font-size: 18px;
+    font-family: 標楷體;
+    padding-top: 10px;
+}
+
+.head_usr{
+    text-align: right;
+    font-size: 20px;
+    padding-top: 35px;
+}
+
+.purple_color{
+    font-size: 2em;
+    color: #fff;
+    background: #b198dc;
+    text-align: left;
+    padding: 14px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+
+.table2-header{
+    line-height: 60px;
+}
+
+th.table2-head{
+    padding: 20px;
+}
+tr.table2-head{
+    font-weight: 700;
+    padding: 20px;
+}
+
+.pink_color{
+    font-size: 2em;
+    color: #fff;
+    background: #ca428b;
+    text-align: left;
+    padding: 14px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}
+
+.p_set{
+    padding-top:20px;
+}
+
+.txt_center{
+    text-align: center;
+}
+
+.txt_s_20{
+    font-size: 20px;
+}
+
+ol{
+    margin-left: 1.5em;
+}
+ul{
+    margin-left: 1.5em;
+}
+ul.A {
+    list-style-type:decimal;
+}
+
+ul.B {
+    list-style-type:lower-alpha;
+}
+
+ul.C {
+    list-style-type:upper-alpha;
+}
+
+.yellowcolor{
+    background: #FFA800;
+}
+
+.txt_s_18{
+    font-size: 18px;
+}

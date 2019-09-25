@@ -1,0 +1,75 @@
+body 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 20px;
+			}
+
+table 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 13px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 18px;
+			}
+
+A:link 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:visited 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:active 			{TEXT-DECORATION: none}
+A:hover 			{COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.Header01 		{
+			FONT-FAMILY: 新細明體, verdana, sans-serif;
+			FONT-SIZE: 16px;
+			LETTER-SPACING: 2px;
+			LINE-HEIGHT: 24px;
+			FONT-WEIGHT: bold;
+			COLOR: #004488;
+			}
+
+.Header02 		{
+			FONT-FAMILY: 新細明體, verdana, sans-serif;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 2px;
+			LINE-HEIGHT: 18px;
+			COLOR: #800000;
+			}
+
+.descTxt 		{
+			COLOR: #777777;
+			LINE-HEIGHT: 16px;
+			}
+
+.job_td_style1		{
+			BACKGROUND-COLOR: #DD99CC;
+			}
+.job_td_style2		{
+			BACKGROUND-COLOR: #99CC66;
+			}
+.fa_td_style		{
+			COLOR: #000080;
+			BACKGROUND-COLOR: #E0F0E0;
+			CURSOR: hand;
+			}
+.pl_table_style		{FONT-SIZE: 14px; LINE-HEIGHT: 18px;}
+.pr_table_style		{FONT-SIZE: 11px; LINE-HEIGHT: 14px;}
+
+.styleTxt		{
+			position: absolute;
+			display:none;
+			background-color: #FFFFEE;
+			COLOR: #800000;
+			FONT-WEIGHT: bold;
+			padding: 2;
+			border-width: 1px;
+			border-color: #FF6666;
+			border-style: solid;
+			}
+
+.text_fix 		{height:25px; font-size: 10pt; color:#FF0000 ;background-color:#F2ECF2; border:solid #996699 1px; text-align:right; }
+.text_fix1		{height:25px; font-size: 10pt; color:#FF0000 ;background-color:#FFFFFF; border:solid #AAAAAA 1px; text-align:right; }
+.text_fix0 		{height:25px; font-size: 10pt; font-weight:bold; color:#FF0000 ;background-color:#FFFFFF; border:0;  }
+
+A.type01:link 		{COLOR: #FFFFFF; }
+A.type01:active 	{COLOR: #777777; }
+A.type01:visited 	{COLOR: #FFFFFF; }
+A.type01:hover 		{COLOR: #FFFC00; TEXT-DECORATION: none}

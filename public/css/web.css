@@ -1,0 +1,486 @@
+body 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 16px;
+			}
+table 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 22px;
+			}
+
+A:link 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:visited 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:active 			{TEXT-DECORATION: none}
+A:hover 			{COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.bigHeader 		{
+			FONT-FAMILY: verdana, sans-serif;
+			FONT-SIZE: 24px;
+			LETTER-SPACING: 4px;
+			LINE-HEIGHT: 30px;
+			FONT-WEIGHT: bold;
+			COLOR: #004488;
+			}
+
+.secHeader 		{
+			FONT-FAMILY: verdana, sans-serif;
+			FONT-SIZE: 16px;
+			LETTER-SPACING: 4px;
+			LINE-HEIGHT: 20px;
+			FONT-WEIGHT: bold;
+			COLOR: #555555;
+			}
+
+.descTxt 			{
+			COLOR: #777777;
+			LINE-HEIGHT: 20px;
+			}
+
+.tailTxt	 		{
+			COLOR: #3366FF;
+			LINE-HEIGHT: 20px;
+			}
+
+.linkTxt	 		{
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 2px;
+			LINE-HEIGHT: 20px;
+			}
+
+.miniTxt			{
+			FONT-SIZE: 12px;
+			LINE-HEIGHT: 14px;
+			}
+
+.smallTxt			{
+			FONT-SIZE: 13px;
+			LINE-HEIGHT: 16px;
+			}
+
+.f7style			{
+			COLOR: navy;
+			}
+
+
+#index_head_01_desc
+{
+	position: absolute;
+	left: 200;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_02_desc
+{
+	position: absolute;
+	left: 250;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_03_desc
+{
+	position: absolute;
+	left: 300;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_04_desc
+{
+	position: absolute;
+	left: 350;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_05_desc
+{
+	position: absolute;
+	left: 400;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_06_desc
+{
+	position: absolute;
+	left: 450;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_07_desc
+{
+	position: absolute;
+	left: 500;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+#index_head_08_desc
+{
+	position: absolute;
+	left:550;
+	top: 100;
+	z-index:10;
+	visibility: hidden;
+	width: 200;
+	background-color: #FFFFEE;
+	border-width:3;
+	border-color: #999999;
+	border-style: double;
+	padding: 2;
+}
+
+A.link_A			{TEXT-DECORATION: none}
+A.link_A:link 		{COLOR:#6666FF}
+A.link_A:visited 		{COLOR:#6666FF}
+A.link_A:hover 		{COLOR:#999999; TEXT-DECORATION: underline}
+
+A.link_B			{TEXT-DECORATION: none}
+A.link_B:link 		{COLOR:#6666FF}
+A.link_B:visited 		{COLOR:#6666FF}
+A.link_B:hover 		{COLOR:#339933; TEXT-DECORATION: underline}
+
+A.link_C			{TEXT-DECORATION: none}
+A.link_C:link 		{COLOR:#6666FF}
+A.link_C:visited 		{COLOR:#6666FF}
+A.link_C:hover 		{COLOR:#FF9900; TEXT-DECORATION: underline}
+
+A.link_D			{TEXT-DECORATION: none}
+A.link_D:link 		{COLOR:#6666FF}
+A.link_D:visited 		{COLOR:#6666FF}
+A.link_D:hover 		{COLOR:#CC6699; TEXT-DECORATION: underline}
+
+A.link_E			{TEXT-DECORATION: none}
+A.link_E:link 		{COLOR:#6666FF}
+A.link_E:visited 		{COLOR:#6666FF}
+A.link_E:hover 		{COLOR:#333366; TEXT-DECORATION: underline}
+
+.pWebPage		{
+			FONT-FAMILY: 新細明體, verdana, sans-serif;
+			FONT-SIZE: 15px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			}
+
+.DBible		 	{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.DBible A:link 		{COLOR: #BE450D; }
+.DBible A:active 		{COLOR: #BE450D; }
+.DBible A:visited 		{COLOR: #BE450D; }
+.DBible A:hover 		{COLOR: #000080; TEXT-DECORATION: none }
+
+.DBible1		 	{COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 18px;
+			TEXT-DECORATION: none;}
+
+.DBible1 A:link 		{COLOR: #BE450D; }
+.DBible1 A:active 		{COLOR: #BE450D; }
+.DBible1 A:visited 		{COLOR: #BE450D; }
+.DBible1 A:hover 		{COLOR: #800000; TEXT-DECORATION: underline }
+
+.DBibleHeader 		{
+			FONT-FAMILY: 新細明體, verdana, sans-serif;
+			FONT-SIZE: 16px;
+			LETTER-SPACING: 4px;
+			LINE-HEIGHT: 20px;
+			FONT-WEIGHT: bold;
+			COLOR: #663300;
+			}
+.DBibleTitle 		{
+			COLOR: #FF9900;
+			}
+
+.DBibleTxt	 	{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 24px;
+			TEXT-DECORATION: none;
+			}
+
+.Bible_S 		{font-family: 新細明體,細明體; font-size: 15px; line-height: 24px; color:#000000;TEXT-DECORATION: none}
+.Bible_S A:link 	{COLOR:#32835B}
+.Bible_S A:active 	{COLOR:#000000}
+.Bible_S A:visited 	{COLOR:#32835B}
+.Bible_S A:hover 	{COLOR:#FF8040; text-decoration: none}
+
+.button_BS 		{
+			CURSOR: hand;
+			height:22px;
+			font-size: 15px;
+			color:#FFFFFF;
+			background-color:#008080;
+			border-bottom-style:ridge
+			}
+
+.calHeader 		{
+			FONT-SIZE: 16px;
+			LETTER-SPACING: 4px;
+			LINE-HEIGHT: 20px;
+			FONT-WEIGHT: bold;
+			COLOR: #CC6600;
+			}
+
+.CalData		{
+			FONT-SIZE: 13px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 20px;
+			}
+.calMenu A:link 	{COLOR: #333333; }
+.calMenu A:active 	{COLOR: #333333; }
+.calMenu A:visited 	{COLOR: #333333; }
+.calMenu A:hover 	{COLOR: #BE450D; TEXT-DECORATION: none }
+
+.txt_style_cal 		{
+			height:22px;
+			font-size: 16px;
+			color:#CC6600;
+			background-color:#FFFFEE;
+			border-style:groove
+			}
+.button_cal 		{
+			CURSOR: hand;
+			height:22px;
+			font-size: 15px;
+			color:#CC6600;
+			background-color:#FFFFEE;
+			border-bottom-style:ridge
+			}
+.butTbStyle_cal		{
+			COLOR: #000080;
+			BACKGROUND-COLOR: #E0EAF0;
+			CURSOR: hand;
+			}
+.butTbStyle_in		{
+			COLOR: #777777;
+			BACKGROUND-COLOR: #FFFFFF;
+			CURSOR: hand;
+			}
+.butTbStyle_in A:link 		{COLOR: #777777; TEXT-DECORATION: none}
+.butTbStyle_in A:active 	{COLOR: #777777; TEXT-DECORATION: none}
+.butTbStyle_in A:visited 	{COLOR: #777777; TEXT-DECORATION: none}
+.butTbStyle_in A:hover 		{COLOR: #BE450D; TEXT-DECORATION: none}
+
+.button_DBible 		{
+			CURSOR: hand;
+			height: 22px;
+			font-size: 12px;
+			color: #990000;
+			background-color: #FFFFEE;
+			border-style: outset;
+			}
+.EquipTitle 		{
+			FONT-WEIGHT: bold;
+			COLOR: #0033AA;
+			}
+.SermonTitle 		{
+			FONT-WEIGHT: bold;
+			COLOR: #003366;
+			}
+.button_Sermon 		{
+			CURSOR: hand;
+			height: 22px;
+			font-size: 12px;
+			color: #003366;
+			background-color: #FFFFEE;
+			border-style: outset;
+			}
+.outreach		{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.outreach A:link 		{COLOR: #339900; TEXT-DECORATION: none}
+.outreach A:active 		{COLOR: #339900; TEXT-DECORATION: none}
+.outreach A:visited 		{COLOR: #339900; TEXT-DECORATION: none}
+.outreach A:hover 		{COLOR: #B61E16; TEXT-DECORATION: underline }
+
+.praynet		{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.praynet A:link 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet A:active 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet A:visited 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet A:hover 		{COLOR: #B61E16; TEXT-DECORATION: underline }
+
+.praynet1		{COLOR: #000000;
+			FONT-FAMILY: 新細明體, verdana, sans-serif;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.praynet1 A:link 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet1 A:active 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet1 A:visited 		{COLOR: #59396F; TEXT-DECORATION: none}
+.praynet1 A:hover 		{COLOR: #B61E16; TEXT-DECORATION: underline }
+
+.kdg		{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.kdg A:link 		{COLOR: #B61E16; TEXT-DECORATION: none}
+.kdg A:active 		{COLOR: #B61E16; TEXT-DECORATION: none}
+.kdg A:visited 		{COLOR: #B61E16; TEXT-DECORATION: none}
+.kdg A:hover 		{COLOR: #00CFD9; TEXT-DECORATION: underline }
+
+.kdgtop		{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 標楷體;
+			FONT-SIZE: 18px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.kdgtop A:link 		{COLOR: #FFFFFF; TEXT-DECORATION: none}
+.kdgtop A:active 		{COLOR: #FFFFFF; TEXT-DECORATION: none}
+.kdgtop A:visited 		{COLOR: #FFFFFF; TEXT-DECORATION: none}
+.kdgtop A:hover 		{COLOR: #FDE217; TEXT-DECORATION: underline }
+
+.pnt		{COLOR: #000000;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.pnt A:link 		{COLOR: #999966; TEXT-DECORATION: none}
+.pnt A:active 		{COLOR: #999966; TEXT-DECORATION: none}
+.pnt A:visited 		{COLOR: #999966; TEXT-DECORATION: none}
+.pnt A:hover 		{COLOR: #336633; TEXT-DECORATION: underline }
+
+.sms_text_fix0 		{
+			height:25px;
+			font-size: 15px;
+			font-weight:bold;
+			color:#FF0000 ;
+			background-color:#FFFFFF;
+			border:solid #AAAAAA 1px;
+			text-align:right;
+			}
+
+A.linkAdd			{TEXT-DECORATION: none}
+A.linkAdd:link 			{COLOR:#FF0000}
+A.linkAdd:visited 			{COLOR:#FF0000}
+A.linkAdd:hover 			{COLOR:#999999; TEXT-DECORATION: underline}
+
+A.linkEdit 			{TEXT-DECORATION: none}
+A.linkEdit:link 			{COLOR:#006600}
+A.linkEdit:visited 			{COLOR:#006600}
+A.linkEdit:hover 			{COLOR:#999999; TEXT-DECORATION: underline}
+
+A.linkDele 			{TEXT-DECORATION: none}
+A.linkDele:link 			{COLOR:#9900CC}
+A.linkDele:visited 			{COLOR:#9900CC}
+A.linkDele:hover 			{COLOR:#999999; TEXT-DECORATION: underline}
+
+A.linkSearch 			{TEXT-DECORATION: none}
+A.linkSearch:link 			{COLOR:#0066CC}
+A.linkSearch:visited 		{COLOR:#0066CC}
+A.linkSearch:hover 			{COLOR:#999999; TEXT-DECORATION: underline}
+
+A.linkOthrs			{TEXT-DECORATION: none}
+A.linkOthrs:link 			{COLOR:#FF6633}
+A.linkOthrs:visited 			{COLOR:#FF6633}
+A.linkOthrs:hover 			{COLOR:#999999; TEXT-DECORATION: underline}
+
+.spanstyle			{
+				position: absolute;
+				z-index:10;
+				visibility: hidden;
+				font-size: 11px;
+				FONT-WEIGHT:bold;
+				top: -50px;
+				width:150;
+				LINE-HEIGHT:18px;
+				background-Color:#FFFFFF;
+				}
+.church		{COLOR: #B93A99;
+			FONT-WEIGHT: bold;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 16px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 20px;
+			TEXT-DECORATION: none;}
+.church A:link 		{COLOR: #601CFC; TEXT-DECORATION: none}
+.church A:active 		{COLOR: #BC84AE; TEXT-DECORATION: none}
+.church A:visited 		{COLOR: #BE450D; TEXT-DECORATION: none}
+.church A:hover 		{COLOR: #B61E16; TEXT-DECORATION: underline }
+
+.40NewsTxt	 	{
+			FONT-WEIGHT: bold;
+			COLOR: #6D1666;
+			FONT-FAMILY: 華康中圓體;
+			FONT-SIZE: 18px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 24px;
+			TEXT-DECORATION: none;
+			}
+.40NewsTxt A:link 		{COLOR: #6D1666; TEXT-DECORATION: none}
+.40NewsTxt A:active 		{COLOR: #0000ff; TEXT-DECORATION: none}
+.40NewsTxt A:visited 		{COLOR: #0000ff; TEXT-DECORATION: none}
+.40NewsTxt A:hover 		{COLOR: #0000ff; TEXT-DECORATION: underline }
