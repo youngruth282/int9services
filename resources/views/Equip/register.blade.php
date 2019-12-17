@@ -2,6 +2,7 @@
 @section('title', '台北靈糧堂_裝備課程')
 
 @section('content')
+<!-- <link rel="stylesheet" href="/equip/llc-form.css"> -->
 
 @if (count($errors) > 0)
     <div class="col-xs-12 col-sm-12 col-md-12 text-center">

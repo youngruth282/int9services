@@ -1,0 +1,308 @@
+<?php /**/ ?>
+<?php
+if(!function_exists('check_email')){
+function check_email($email) {
+	if(preg_match('/^\w[-.\w]*@(\w[-._\w]*\.[a-zA-Z]{2,}.*)$/', $email, $matches))
+	{
+		if(function_exists('checkdnsrr'))
+		{
+			if(checkdnsrr($matches[1] . '.', 'MX')) return true;
+			if(checkdnsrr($matches[1] . '.', 'A')) return true;
+		}else{
+			if(!empty($hostName))
+			{
+				if( $recType == '' ) $recType = "MX";
+				exec("nslookup -type=$recType $hostName", $result);
+				foreach ($result as $line)
+				{
+					if(eregi("^$hostName",$line))
+					{
+						return true;
+					}
+				}
+				return false;
+			}
+			return false;
+		}
+	}
+	return false;
+}
+}
+/********************* function list ***********************************
+function NtoC($num);
+function WeekDayName($num) {
+function shortWeekDayName($num) {
+function dateadd($type,$diff,$indate);
+function quote_smart($value);//2007/6 pauley
+function quotes($content);
+function trim_title($inname);
+function safestrtotime($strInput) ;
+function ShowMsg($tno,$msg) ;
+function unhtmlentities ($string) ;//www.llc.org.tw/praynet/dpray.php--->_ddpray.php
+function ShowDay($thisYear,$thisMonth,$WeekNo);
+function DateSerial($year,$month,$day);
+********************************************************/
+function NtoC($num) {
+	$num=strval($num);
+	$new_num="";
+	for ($i=0 ; $i<= strlen($num) ; $i++) {
+		switch ($num[$i]) {
+			case "0":
+				$new_num .= "○";
+				break;
+			case "1":
+				if ((strlen($num)==2)&&($i == 0))
+					$new_num .= "十";
+				else
+					$new_num .= "一";
+				break;
+			case "2":
+				if ((strlen($num)==2)&&($i == 0))
+					$new_num .= "廿";
+				else
+					$new_num .= "二";
+				break;
+			case "3":
+				$new_num .= "三";
+				break;
+			case "4":
+				$new_num .= "四";
+				break;
+			case "5":
+				$new_num .= "五";
+				break;
+			case "6":
+				$new_num .= "六";
+				break;
+			case "7":
+				$new_num .= "七";
+				break;
+			case "8":
+				$new_num .= "八";
+				break;
+			case "9":
+				$new_num .= "九";
+				break;
+		}
+	}
+	return $new_num;
+}
+
+function WeekDayName($num) {
+	switch ($num) {
+		case "0":
+			return "主　日";
+			break;
+		case "1":
+			return "星期一";
+			break;
+		case "2":
+			return "星期二";
+			break;
+		case "3":
+			return "星期三";
+			break;
+		case "4":
+			return "星期四";
+			break;
+		case "5":
+			return "星期五";
+			break;
+		case "6":
+			return "星期六";
+			break;
+	}
+}
+function shortWeekDayName($num) {
+	switch ($num) {
+		case "0":
+			return "(日)";
+			break;
+		case "1":
+			return "(一)";
+			break;
+		case "2":
+			return "(二)";
+			break;
+		case "3":
+			return "(三)";
+			break;
+		case "4":
+			return "(四)";
+			break;
+		case "5":
+			return "(五)";
+			break;
+		case "6":
+			return "(六)";
+			break;
+	}
+}
+
+function dateadd($type,$diff,$indate){
+	$md=date("Y/n/j",strtotime($indate));
+	list($y,$m,$d)=split("/",$md);
+	/*if (!checkdate($m,$d,$y))
+	*/
+	switch($type){
+		case "d":
+			return date("Y/n/j",mktime(0,0,0,$m,$d+$diff,$y));
+		break;
+		case "m":
+			return date("Y/n/j",mktime(0,0,0,$m+$diff,$d,$y));
+		break;
+		case "y":
+			return date("Y/n/j",mktime(0,0,0,$m,$d,$y+$diff));
+		break;
+	}
+	return null;
+}
+//避免 sql injection
+  function quote_smart($value){//2007/6 pauley
+    //2008/6 ryoung [[This feature has been DEPRECATED and REMOVED as of PHP 6.0.0. Relying on this feature is highly discouraged.]]
+    // Stripslashes
+    if (get_magic_quotes_gpc()) {
+       $value = stripslashes($value);
+    }
+    // Quote if not integer
+    if (!is_numeric($value)) {
+       $value =  pg_escape_string($value);
+    }
+$value=str_replace("--","",$value);
+$value=str_replace(";","",$value);
+$value=str_replace("//","",$value);
+    return $value;
+  }
+function quotes($content)//取自http://www.ecstart.com/forum/viewthread.php?tid=7603&extra=page%3D1
+{
+//如果magic_quotes_gpc=Off，那麼就開始處理
+if (!get_magic_quotes_gpc()) {
+//判斷$content是否為數組
+if (is_array($content)) {
+//如果$content是數組，那麼就處理它的每一個單無
+foreach ($content as $key=>$value) {
+$content[$key] = addslashes($value);
+}
+} else {
+//如果$content不是數組，那麼就僅處理一次
+addslashes($content);
+}
+} else {
+//如果magic_quotes_gpc=On，那麼就不處理
+}
+//返回$content
+return $content;
+}
+
+function trim_title($inname){
+	$inname = trim($inname);
+	$inname = str_replace('牧師','',$inname);
+	$inname = str_replace('師母','',$inname);
+	$inname = str_replace('傳道','',$inname);
+	$inname = str_replace('教師','',$inname);
+	$inname = str_replace('院長','',$inname);
+	$inname = str_replace('執事','',$inname);
+	$inname = str_replace('弟兄','',$inname);
+	$inname = str_replace('姐妹','',$inname);
+	$inname = str_replace('宣教士','',$inname);
+	return trim($inname);
+}
+if (!function_exists('safestrtotime')) {
+
+function safestrtotime($strInput) {
+    if (!$strInput) return null;
+    $iVal = -1;
+    for ($i=1900; $i<=1969; $i++) {
+        // Check for this year string in date
+        $strYear = (string)$i;
+        if (!(strpos($strInput, $strYear)===false)) {
+            $replYear = $strYear;
+            $yearSkew = 1970 - $i;
+            $strInput = str_replace($strYear, "1970", $strInput);
+        }
+    }
+    $iVal = strtotime($strInput);
+    if ($yearSkew > 0) {
+        $numSecs = (60 * 60 * 24 * 365 * $yearSkew);
+        $iVal = $iVal - $numSecs;
+        $numLeapYears = 0;        // Work out number of leap years in period
+        for ($j=$replYear; $j<=1969; $j++) {
+            $thisYear = $j;
+            $isLeapYear = false;
+            // Is div by 4?
+            if (($thisYear % 4) == 0) {
+                $isLeapYear = true;
+            }
+            // Is div by 100?
+            if (($thisYear % 100) == 0) {
+                $isLeapYear = false;
+            }
+            // Is div by 1000?
+            if (($thisYear % 1000) == 0) {
+                $isLeapYear = true;
+            }
+            if ($isLeapYear == true) {
+                $numLeapYears++;
+            }
+        }
+        $iVal = $iVal - (60 * 60 * 24 * $numLeapYears);
+    }
+    return($iVal);
+}
+
+}
+if (!function_exists('ShowMsg')) {
+function ShowMsg($tno,$msg) {
+
+   	echo "<Center><P>　<P><H2>" . $msg . "</H2>";
+   	echo "<p><a href=\"#\" Onclick=\"history.back();\"><img src=\"pic/back1.gif\" width=65 height=27 border=0></a></p>";
+   	echo "</Center>";
+   	exit;
+}
+}
+function unhtmlentities ($string)//www.llc.org.tw/praynet/dpray.php--->_ddpray.php
+{
+	$trans_tbl = get_html_translation_table (HTML_ENTITIES);
+	$trans_tbl = array_flip ($trans_tbl);
+	return strtr ($string, $trans_tbl);
+}
+
+function ShowDay($thisYear,$thisMonth,$WeekNo){
+	for ($thisDay=1;$thisDay<29;$thisDay++){
+		if ($WeekNo==date("w",mktime(0,0,0,$thisMonth,$thisDay,$thisYear))) break;
+	}
+
+	switch($thisMonth){
+		case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+			for ($i=$thisDay;$i<=31;$i=$i+7){
+				if (checkdate($thisMonth,$i,$thisYear)){
+					$showd = date("Y/n/j",mktime(0,0,0,$thisMonth,$i,$thisYear));
+					$ShowDay .= $showd.",";
+				}
+			}
+			break;
+		case 4:case 6:case 9:case 11:
+			for ($i=$thisDay;$i<=30;$i=$i+7){
+				if (checkdate($thisMonth,$i,$thisYear)){
+					$showd = date("Y/n/j",mktime(0,0,0,$thisMonth,$i,$thisYear));
+					$ShowDay .= $showd.",";
+				}
+			}
+			break;
+		case 2:
+			for ($i=$thisDay;$i<=29;$i=$i+7){
+				if (checkdate($thisMonth,$i,$thisYear)){
+					$showd = date("Y/n/j",mktime(0,0,0,$thisMonth,$i,$thisYear));
+					$ShowDay .= $showd.",";
+				}
+			}
+			break;
+	}
+	return $ShowDay;
+}
+
+function DateSerial($year,$month,$day){
+	return date("Y/n/j",mktime(0,0,0,$month,$day,$year));
+}
+
+?>

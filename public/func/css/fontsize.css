@@ -1,0 +1,104 @@
+.text11b {
+	font-family: "新細明體";
+	font-size: 10pt;
+	line-height: normal;
+	color: #000000;
+		letter-spacing: 0.2em;
+	text-indent: 0pt;
+}
+.text10b {
+	font-family: "新細明體";
+	font-size: 10pt;
+	line-height: 15pt;
+	color: #000000;
+		letter-spacing: 0.2em;
+	text-indent: 0pt;
+}
+.text9g {
+	font-family: "新細明體";
+	font-size: 9pt;
+	color: #424200;
+	letter-spacing: 0.2em;
+	line-height: normal;
+	text-decoration: none;
+}
+.IT12blue {
+	font-size: 12pt;
+	line-height: 16pt;
+	color: #99FFFF;
+	text-decoration: none;
+	letter-spacing: 0.3em;
+	text-indent: 20pt;
+}
+.text11grey {
+	font-size: 11pt;
+	line-height: 15pt;
+	color: #D8D8D8;
+	text-decoration: none;
+	letter-spacing: 0.2em;
+}
+.IT12g {
+	font-family: "新細明體";
+	font-size: 12pt;
+	color: #424200;
+	letter-spacing: 0.2em;
+	line-height: normal;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.IT12b {
+	font-family: "新細明體";
+	font-size: 12pt;
+	line-height: 15pt;
+	color: #000000;
+	letter-spacing: 0.2em;
+	text-indent: 20pt;
+	font-weight: bold;
+}
+.IT12r {
+	font-family: "新細明體";
+	font-size: 12pt;
+	line-height: 15pt;
+	color: #660000;
+	letter-spacing: 0.2em;
+	text-indent: 20pt;
+	font-weight: bold;
+	}
+.IT14ｂ {
+	font-family: "新細明體";
+	font-size: 14pt;
+	color: #000066;
+	letter-spacing: 0.2em;
+	line-height: normal;
+	text-decoration: none;
+	font-weight: bold;
+}
+.b12 {
+	font-family: "新細明體";
+	font-size: 12pt;
+	line-height: 15pt;
+	color: #000000;
+	font-weight: normal;
+	letter-spacing: 0.2em;
+	text-indent: 0px;
+}
+.white {
+	font-family: "華康粗黑體(P)";
+	font-size: 14pt;
+	letter-spacing: 0.2em;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.r10 {
+	font-family: "細明體";
+	font-weight: bold;
+	color: #990000;
+}
+.text9y{
+	font-family: "新細明體";
+	font-size: 9pt;
+	color: #ffcc00;
+	letter-spacing: 0.2em;
+	line-height: normal;
+	text-decoration: none;
+}

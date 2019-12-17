@@ -9,7 +9,7 @@ class MemappTeam extends Model
     
     protected $connection="pgsql";
 
-    protected $table="public.v_memapp_team_info";//
+    protected $table="public.v_memapp_teaminfo";//
 
     protected $fillable = [];
 

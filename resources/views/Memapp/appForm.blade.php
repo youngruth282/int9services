@@ -45,7 +45,7 @@
 	<div class="register gray-bg dashbard-1" style="max-width:80%;margin:0 auto;">
 		<div class="col-md-12 title purple">
 			<h2><img src="/services/logo-w.png" width=40px>　台北靈糧堂 組員資料登錄</h2>
-		</div>
+        </div>
         @if (count($errors) > 0)
 		<div class="col-md-12 text-center alert alert-danger">
             @if ($errors->has('reg_name'))
@@ -73,6 +73,7 @@
                     <strong style='font-size:12px' class='text-danger'>錯誤，生日格式錯誤!!</strong>
                 </span>
             @endif                        
+            
             @if ($errors->has('reg_mobil'))
                 <span class="help-block">
                     <strong style='font-size:12px' class='text-danger'>錯誤，行動電話格式錯誤!!</strong>
@@ -102,20 +103,20 @@
 					<div class="txt_s_18">
 						<p><div class="row control-group">
                             <label style="text-align: right;" class="col-lg-2 col-md-2 control-label" ><font color=red>*</font>牧 區</label>
-                            <div class="col-lg-3 col-md-3 control-label">{{ $team[0]['area_name'] }}
+                            <div class="col-lg-3 col-md-3 control-label">{{ $team['area_name'] }}
                             </div>
                             <label style="text-align: right;" class="col-lg-3 col-md-3 control-label" ><font color=red>*</font>小 組</label>
-                            <div class="col-lg-3 col-md-3 control-label">{{ $team[0]['team_name'] }}
+                            <div class="col-lg-3 col-md-3 control-label">{{ $team['team_name'] }}
                             </div>
                         </div></p>
 						<p><div class="row control-group">
 							<label style="text-align: right;" class="col-lg-2 col-md-2 control-label" ><font color=red>*</font>組員姓名</label>
 							<div class="col-lg-3 col-md-3 control-label">
-                                {!! Form::text('reg_name',  $memapp[0]['newmem_name'], ['id'=>'reg_name', 'onfocus' => 'clearmsg()',  'placeholder' => '請輸入您的姓名','class' => 'form-control txt_s_18', 'requried'=>'required', 'style' => 'maxlength:30']) !!}
+                                {!! Form::text('reg_name',  $memapp['newmem_name'], ['id'=>'reg_name', 'onfocus' => 'clearmsg()',  'placeholder' => '請輸入您的姓名','class' => 'form-control txt_s_18', 'requried'=>'required', 'style' => 'maxlength:30']) !!}
 							</div>
 							<label style="text-align: right;" class="col-lg-3 col-md-3 control-label" ><font color=red>*</font>身份證字號</label>
 							<div class="col-lg-3 col-md-3 control-label">
-                                {!! Form::text('reg_pid',  $memapp[0]['reg_pid'], ['id'=>'reg_pid', 'onfocus' => 'clearmsg()', 'placeholder' => '身份證字號','class' => 'form-control txt_s_18', 'requried'=>'required', 'style' => 'maxlength:10']) !!}
+                                {!! Form::text('reg_pid',  $memapp['reg_pid'], ['id'=>'reg_pid', 'onfocus' => 'clearmsg()', 'placeholder' => '身份證字號','class' => 'form-control txt_s_18', 'requried'=>'required', 'style' => 'maxlength:10']) !!}
                             </div>
                         </div></p>
                         <p><div class="row control-group">
@@ -147,16 +148,16 @@
                             <label style="text-align: right;" class="col-lg-3 col-md-3 control-label" ><font color=red>*</font>電子信箱</label>
                             <div class="col-lg-3 col-md-3 control-label">
                                 
-                                {!! Form::email('reg_email',  $memapp[0]->newmem_email, ['id'=>'reg_email', 'onfocus' => 'clearmsg()', 'placeholder' => '電子信箱','class' => 'form-control', 'requried'=>'required', 'style' => 'maxlength:100']) !!}
+                                {!! Form::email('reg_email',  $memapp->newmem_email, ['id'=>'reg_email', 'onfocus' => 'clearmsg()', 'placeholder' => '電子信箱','class' => 'form-control', 'requried'=>'required', 'style' => 'maxlength:100']) !!}
 							</div>
                         </div></p>
                         <p><div class="row control-group">
                             <label style="text-align: right;" class="col-lg-2 col-md-2 control-label">已受洗</label>
                             <div class="col-lg-2 col-md-2">
-                                <input name="reg_ifbap" type="radio" value="N" onclick="HideContent('reg_bapdate_str')">否　　
-                                <input name="reg_ifbap" type="radio" value="Y" onclick="ShowContent('reg_bapdate_str')" checked>是
+                                <input name="reg_ifbap" type="radio" value="N" onclick="HideContent('reg_bapdate_label')">否　　
+                                <input name="reg_ifbap" type="radio" value="Y" onclick="ShowContent('reg_bapdate_label')" checked>是
                             </div>
-                            <div id="reg_bapdate_str">
+                            <div id="reg_bapdate_label">
 	                            <label style="text-align: right;" class="col-lg-4 col-md-4 control-label">受洗日期</label>
 	                            <div class="col-lg-6 col-md-6 control-label">
                                     {!! Form::text('reg_bapdate_str',  old('reg_bapdate_str'), ['id'=>'reg_bapdate_str', 'onfocus' => 'clearmsg()', 'placeholder' => '西元年/月/日','class' => 'form-control txt_s_18', 'style' => 'maxlength:30']) !!}
@@ -190,7 +191,7 @@
                             </div>
                         </div></p>
                         <?php 
-                        if(substr($team[0]->team_no,0,2)=='AG' || substr($team[0]->team_no,0,2)=='DL'){
+                        if(substr($team->team_no,0,2)=='AG' || substr($team->team_no,0,2)=='DL'){
                         	//青年裝備
                         ?>
                             <div id="youth">
@@ -403,6 +404,11 @@
         errmsg += '請輸入聯絡您的Email<BR>';
       }else if (IsEmail($("#reg_email").val())==false){
         errmsg += 'email 格式錯誤<BR>';
+      }
+      if ($("input[name=reg_ifbap]:checked").val()=='Y'){
+        if ($("#reg_bapdate_str").val()==''){
+            errmsg += '請輸入您的受洗日期<BR>';
+        }
       }
       if ($("#reg_zip").val()==''){
         errmsg += '請輸入您的聯絡地址郵遞區號<BR>';

@@ -81,8 +81,8 @@ return [
         'pgsql_pgdbs' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('PGDB_pgDBS_HOST', '127.0.0.1'),
-            'port' => env('PGDB_pgDBS_PORT', '5432'),
+            'host' => env('PGDB_HOST', '127.0.0.1'),
+            'port' => env('PGDB_PORT', '5432'),
             'database' => env('PGDB_pgDBS_DATABASE', 'forge'),
             'username' => env('PGDB_pgDBS_USERNAME', 'forge'),
             'password' => env('PGDB_pgDBS_PASSWORD', ''),
@@ -96,8 +96,8 @@ return [
         'pgsql_webdb' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('PGDB_WebDB_HOST', '127.0.0.1'),
-            'port' => env('PGDB_WebDB_PORT', '5432'),
+            'host' => env('PGDB_HOST', '127.0.0.1'),
+            'port' => env('PGDB_PORT', '5432'),
             'database' => env('PGDB_WebDB_DATABASE', 'forge'),
             'username' => env('PGDB_WebDB_USERNAME', 'forge'),
             'password' => env('PGDB_WebDB_PASSWORD', ''),

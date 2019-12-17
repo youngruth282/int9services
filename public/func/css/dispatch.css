@@ -1,0 +1,89 @@
+body 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING: 2px;
+			LINE-HEIGHT: 16px;
+			}
+table 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING: 2px;
+			LINE-HEIGHT: 16px;
+			}
+
+A:link 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:visited 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:active 			{TEXT-DECORATION: none}
+A:hover 			{COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.dispatch		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:2px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.dispatch A:link 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.dispatch A:active 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.dispatch A:visited 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.dispatch A:hover 		{ COLOR: #44aaaa;TEXT-DECORATION: underline }
+
+.dispatch_T		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.dispatch_T A:link 		{ COLOR: #59396F;TEXT-DECORATION: none}
+.dispatch_T A:active 		{ COLOR: #59396F;TEXT-DECORATION: none}
+.dispatch_T A:visited 		{ COLOR: #59396F;TEXT-DECORATION: none}
+.dispatch_T A:hover 		{ COLOR: #59396F;TEXT-DECORATION: underline }
+
+.di_A		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.di_A A:link 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_A A:active 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_A A:visited 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_A A:hover 		{ COLOR: #44aaaa;TEXT-DECORATION: underline }
+
+.di_Y		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.di_Y A:link 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_Y A:active 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_Y A:visited 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_Y A:hover 		{ COLOR: #44aaaa;TEXT-DECORATION: underline }
+
+.di_N		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.di_N A:link 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_N A:active 		{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_N A:visited 	{ COLOR: #44aaaa;TEXT-DECORATION: none}
+.di_N A:hover 		{ COLOR: #44aaaa;TEXT-DECORATION: underline }
+
+.di_O		{
+			COLOR: #000000;
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 14px;
+			LETTER-SPACING:1px;
+			LINE-HEIGHT: 16px;
+			TEXT-DECORATION: none;}
+.di_O A:link 		{ COLOR: #aa44aa;TEXT-DECORATION: none}
+.di_O A:active 		{ COLOR: #aa44aa;TEXT-DECORATION: none}
+.di_O A:visited 	{ COLOR: #aa44aa;TEXT-DECORATION: none}
+.di_O A:hover 		{ COLOR: #aa44aa;TEXT-DECORATION: underline }

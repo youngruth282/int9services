@@ -1,0 +1,124 @@
+A:active {	TEXT-DECORATION: none}
+
+A:hover {	COLOR: #800000; TEXT-DECORATION: underline}
+
+A:link {	COLOR: #343770; TEXT-DECORATION: none}
+
+A:visited {	COLOR:teal; TEXT-DECORATION: none}
+
+BODY {	FONT-FAMILY: 新細明體, 'MS Sans Serif'; FONT-SIZE: 12pt; LINE-HEIGHT: 15px}
+
+table 				{ FONT-FAMILY: 新細明體,細明體; FONT-SIZE: 12pt; LETTER-SPACING: 1pt; LINE-HEIGHT: 13pt}
+
+.topmenu {	COLOR: #676768; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; TEXT-DECORATION: none}
+
+.topmenu A:link {	COLOR: #676768; TEXT-DECORATION: none }
+
+.topmenu A:active {	COLOR: #676768; TEXT-DECORATION: none}
+
+.topmenu A:visited {	COLOR: #676768; TEXT-DECORATION: none}
+
+.topmenu A:hover {	COLOR: #800000; TEXT-DECORATION: underline}
+
+.Leftmenu {	COLOR: #FFFFFF; FONT-FAMILY: arial; Font-weight: bold ; FONT-SIZE: 9pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-ALIGN: left}
+
+.Leftmenu A:link {	COLOR: #FFFFFF; TEXT-DECORATION: none}
+
+.Leftmenu A:active {	COLOR: #FFFFFF; TEXT-DECORATION: none}
+
+.Leftmenu A:visited {	COLOR: #FFFFFF; TEXT-DECORATION: none}
+
+.Leftmenu A:hover {	COLOR: #6F6F6F; TEXT-DECORATION: none}
+
+.Mmenu {	COLOR: #000000; FONT-FAMILY: 新細明體, 'Times New Roman' ; FONT-SIZE: 9pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.Mmenu A:link {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.Mmenu A:active {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.Mmenu A:visited {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.Mmenu A:hover {	COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.DFmenu {	COLOR: #000000; FONT-FAMILY: 新細明體, 'Times New Roman' ; FONT-SIZE: 9pt; LINE-HEIGHT: 12pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.DFmenu A:link {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.DFmenu A:active {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.DFmenu A:visited {	COLOR: #0000FF; TEXT-DECORATION: none}
+
+.DFmenu A:hover {	COLOR: #FF0000; TEXT-DECORATION: underline}
+
+.Inputmenu {	COLOR: #000000; FONT-FAMILY: 新細明體, 'Times New Roman' ; FONT-SIZE: 10pt; LINE-HEIGHT: 12pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt;TEXT-DECORATION: none}
+
+.MsgList A:link {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList A:active {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList A:visited {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList A:hover {	COLOR: #FF3300; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: underline}
+
+.Web_table 		{ FONT-FAMILY: 新細明體; FONT-SIZE: 10pt; LETTER-SPACING:1pt; LINE-HEIGHT: 15pt;}
+
+.MsgList1 {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 11pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt;TEXT-DECORATION: none}
+
+.MsgList1 A:link {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 11pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList1 A:active {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 11pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList1 A:visited {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 11pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList1 A:hover {	COLOR: #FF3300; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 11pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: underline}
+
+
+
+.MsgList2 {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt;TEXT-DECORATION: none}
+
+.MsgList2 A:link {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList2 A:active {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList2 A:visited {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList2 A:hover {	COLOR: teal; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList3 {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt;TEXT-DECORATION: none}
+
+.MsgList3 A:link {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList3 A:active {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList3 A:visited {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+.MsgList3 A:hover {	COLOR: #343770; FONT-FAMILY: 新細明體, 'Times New Roman'; FONT-SIZE: 10pt; LINE-HEIGHT: 13pt; LETTER-SPACING: 1pt; TEXT-DECORATION: none}
+
+
+
+.buttonTableStyle		{
+
+				COLOR: #000080;
+
+				BACKGROUND-COLOR: #E0EAF0;
+
+				CURSOR: hand;
+
+				}
+
+.calmenu 			{COLOR: #000000; FONT-FAMILY: 新細明體; FONT-SIZE: 8pt; LINE-HEIGHT: 15pt; }
+
+.calmenu A:link 			{COLOR: #000080; TEXT-DECORATION:none}
+
+.calmenu A:active 			{COLOR: #000080; TEXT-DECORATION:none}
+
+.calmenu A:visited 			{COLOR: #000080; TEXT-DECORATION:none}
+
+.calmenu A:hover 			{COLOR: #800000; TEXT-DECORATION: underline}
+
+.txt_style 				{height:23px; font-size: 9pt; color:#006699; background-color:#FFFFEE; border-style:groove}
+
+.button 				{height:23px; font-size: 9pt; color:#666666; background-color:#FFFFEE; border-bottom-style:ridge}
+

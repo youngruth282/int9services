@@ -12,6 +12,6 @@
 <p class="MsoNormal" style="margin: 0cm 12pt 0.0001pt 0cm; font-family: Arial, Helvetica, sans-serif; text-align: justify; font-size: 12pt; border: none;"><span style="font-family: microsoft jhenghei, sans-serif;">　　願  神賜福您的工作及家庭！</span></p>
 <BR>
 <BR>
-<p class="MsoNormal" style="margin: 0cm 12pt 0.0001pt 0cm; text-align: right; word-break: break-all; font-size: 12pt; font-family: 'Arial Unicode MS', sans-serif; border: none;" align="right"><strong><span style="font-size: 12pt; font-family: 微軟正黑體, sans-serif;">台北靈糧堂牧養處及事工管理處 敬上</span></strong></p>
+<p class="MsoNormal" style="margin: 0cm 12pt 0.0001pt 0cm; text-align: right; word-break: break-all; font-size: 12pt; font-family: 'Arial Unicode MS', sans-serif; border: none;"><strong><span style="font-size: 12pt; font-family: 微軟正黑體, sans-serif;">　　　　台北靈糧堂牧養處及事工管理處 敬上</span></strong></p>
 </body>
 </html>

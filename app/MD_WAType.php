@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MD_WAType extends Model
 {
-    protected $connection="pgsql_webdb";
+    protected $connection="pgsql";
 
     protected $table="watype";
 
@@ -28,4 +28,11 @@ class MD_WAType extends Model
     {
         return $this->hasMany('App\MD_WABible', 'wno', 'wno');
     }
+    // public function scopeViewInfo($query)
+    // {
+    //         return $query->leftJoin('wactivity', 'wactivity.wno','watype.wno')
+    //         ->selectRaw('distinct wactivity.wno,wactivity.wdate,wactivity.wtitle,wactivity.wauther,watype.wname,watype.wcode')->where("watype.wcode ='W2' and date_part('year',age('now',wactivity.wdate)) =0 and date_part('month',age('now',wactivity.wdate)) between 0 and 3")->orderBy('wactivity.wdate', 'desc');
+    // }
+
+    
 }

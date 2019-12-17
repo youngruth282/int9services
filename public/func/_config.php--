@@ -1,0 +1,21 @@
+﻿<?php
+/*---------------------------------------------------*/
+// Remember no "/" in the end!
+//define("WORKWEB_URL", "https://int.llc.org.tw");
+define("WORKWEB_REALPATH", "/var/www/html/Intranet");
+define("ROOT_REALPATH", "/var/www/html");
+
+header('Content-Type: text/html; charset=utf-8');
+/*define("INTRANET_URL", "https://int.llc.org.tw/");
+define("INTRANET_CENTER", "https://int.llc.org.tw/Intranet/main/fra_main.php");*/
+define("INTRANET_URL", "https://int.llc.org.tw");
+define("INTRANET_CENTER", "https://int.llc.org.tw/Intranet/main/fra_main.php");
+session_start();
+define("SESSION_TIMEOUT_TIME", 1440);
+
+define("WEB_URL", "http://www.llc.org.tw");
+define("INTRANET9_URL", "http://bs9.llc.org.tw/Intranet");
+define("UPLOAD_NEWS_PATH", "/Upload/News");
+define("UPLOAD_NEWS_URL", "http://int.llc.org.tw/Upload/News");
+define("UPLOAD_NEWS_REALPATH", WEB_REALPATH.UPLOAD_NEWS_PATH);
+?>

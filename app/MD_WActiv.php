@@ -11,7 +11,7 @@ class MD_WActiv extends Model
 
     protected $table="wactivity";
 
-    protected $fillable = [];
+    protected $fillable = [];//'wdoc', 'updated_at'];
 
     public function watype()
     {

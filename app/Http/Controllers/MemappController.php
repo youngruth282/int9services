@@ -1,5 +1,6 @@
 <?php
-//<iframe src="https://int.llc.org.tw/EquipN/equip.php?no=A01000140&id=10809" frameborder="0" width="100%" height="420px"></iframe>
+// 小組長管理 
+// 新增組員功能 小組長寄邀請信給組員、接受組員回覆是否接受(同意則填寫)、檢查表格填寫內容、完成後寄確認信通知小組長
 
 namespace App\Http\Controllers;
 
@@ -21,74 +22,55 @@ class MemappController extends Controller
      */
     public function index()
     {
-        //https://int9.llc.org.tw/memapp/3333/g/888
-        $tid = 3333;
-        $type = 'g';
-        $req_id = 886;
-        if ($type == 'n'){//拒絕
-            // 暫時先
-            $m= "OK";
-            $class = "round2";
-            return view('Equip.showMsg', compact('m', 'class'));
-        }
-        /**檢查小組狀態*************************/
-        $data = MemTeamLogin::where(['tid'=>$tid, 'granted'=> 'Y'])->get();
-        // dd($data[0]->mlid);
-        if ($data) $mlid = $data[0]->mlid;
-        else dd($data);
-        /**確認申請單*************************/
-        $memapp = Memapp::where(['tid'=>$tid, 'req_id'=>$req_id, 'mlid'=>$mlid])->get();
-        if (!$memapp) dd('dd');
-        /**查詢牧區小組資料以供顯示*************************/
-        $team = MemappTeam::where(['tid'=>$tid])->get();
-        if (!$team) dd('d2d');
-        // dd($memapp);
-        return view('Memapp.register', compact('tid', 'type', 'req_id', 'team', 'mlid', 'memapp', 'team'));
+        $m= "OK";
+        $class = "rounded2";
+        return view('Equip.showMsg', compact('m', 'class'));
+
     }
 
     public function register($tid, $type, $req_id)
     {
+
         $m= "OK";
-        $class = "round2";
-        if ($type == 'n'){//拒絕
-            $m= "NQ";
-            return view('Equip.showMsg', compact('m', 'class'));
-        }
+        $class = "rounded2";
 
         /**檢查小組狀態*************************/
-        $data = MemTeamLogin::where(['tid'=>$tid, 'granted'=> 'Y'])->get();
-
-        if ($data) $mlid = $data[0]->mlid;
-        else{
+        if (MemTeamLogin::where(['tid'=>$tid, 'granted'=> 'Y'])->count() == 1 ){
+            $data = MemTeamLogin::where(['tid'=>$tid, 'granted'=> 'Y'])->first();
+            $mlid = $data->mlid;
+        }else{
             // dd($data);
             $m= "NS";
-            return view('Equip.showMsg', compact('m', 'class'));
+            return view('Memapp.showMsg', compact('m', 'class'));
         } 
         /**確認申請單*************************/
-        $memapp = Memapp::where(['tid'=>$tid, 'req_id'=>$req_id, 'mlid'=>$mlid])->get();
-        if (!$memapp){
+        if (Memapp::where(['tid'=>$tid, 'req_id'=>$req_id, 'mlid'=>$mlid])->count() != 1 ){
             $m= "NA";//找不到申請紀錄
-            return view('Equip.showMsg', compact('m', 'class'));
+            return view('Memapp.showMsg', compact('m', 'class'));
         }
-        if ($memapp[0]->answer=='Y'){
+        $memapp = Memapp::where(['tid'=>$tid, 'req_id'=>$req_id, 'mlid'=>$mlid])->first();
+        if ($memapp->answer=='Y'){
             $m= "N2";//重複申請
-            return view('Equip.showMsg', compact('m', 'class'));
+            return view('Memapp.showMsg', compact('m', 'class'));
         }
         /**查詢牧區小組資料以供顯示*************************/
-        $team = MemappTeam::where(['tid'=>$tid])->get();
-        if (!$team){
+        if (MemappTeam::where(['tid'=>$tid])->count() != 1 ){
             $m= "NC";//找不到牧區小組
-            return view('Equip.showMsg', compact('m', 'class'));
+            return view('Memapp.showMsg', compact('m', 'class'));
         };
-        // dd($memapp);
-        return view('Memapp.register', compact('tid', 'type', 'req_id', 'team', 'mlid', 'memapp', 'team'));
+        if ($type == 'n'){//拒絕
+            Memapp::where(['req_id'=>$req_id])->update(['answer'=>'n', 'answer_ts'=>Carbon::now()]);
+            $m= "NQ";
+            return view('Memapp.showMsg', compact('m', 'class'));
+        }
+        $team = MemappTeam::where(['tid'=>$tid])->first();
+        // dd($team);
+        return view('Memapp.appForm', compact('tid', 'type', 'req_id', 'team', 'mlid', 'memapp', 'team'));
     }
 
-    /*
-    因為 view_post_courses 是收費課程，只檢查，但不會有報名的需要
-    */
     public function check(Request $request)
     {
+        
         // dd($request);
         $tid = $request->A;
         $mlid = $request->B;
@@ -133,18 +115,27 @@ class MemappController extends Controller
             // return redirect('memapp', compact('tid','type', 'req_id'))->withInput()->withErrors($validator);
             return redirect()->back()->withInput()->withErrors($validator);
         }
+        $per_bap_ok=$request->reg_ifbap;
+        $per_bapdate_str=$request->reg_bapdate_str;
+		if ($per_bap_ok=="Y" and $per_bapdate_str==""){
+            return redirect()->back()->withInput()->withErrors(['bapdate' => '請輸入受洗日期']);
+        }
+
         $per_no = $request->reg_pid;
         $per_name = $request->reg_name;
         //=======檢查小組狀態
-        $data = MemTeamLogin::where(['mlid'=>$mlid, 'granted'=> 'Y'])->get();
-        // dd($data);
-        if (!$data){
+        if (!(MemTeamLogin::where(['mlid'=>$mlid, 'granted'=> 'Y'])->exists())){// 找不到
             $m='SS';//抱歉，權限尚未開啟
             return view('Memapp.showMsg', compact('m', 'class'));
+        }else{
+            if (MemTeamLogin::where(['mlid'=>$mlid, 'granted'=> 'Y'])->count() > 1) {
+            // 多於一個，有錯誤
+            $m='SN';//抱歉，權限尚未開啟
+            return view('Memapp.showMsg', compact('m', 'class'));
+            }
         }
         //=====檢查是否已有該會友(身分證號)資料
-        $count = Member::where(['per_no' => $per_no])->count();
-        if ($count > 0){
+        if (Member::where(['per_no' => $per_no])->count() > 0){
             $m="S2";//會友資料已存在
             return view('Memapp.showMsg', compact('m', 'class'));
         }
@@ -178,31 +169,40 @@ class MemappController extends Controller
         $mem->job_class = $job_class;
         $mem->sch_class = $sch_class;
         $mem->sch_name = $sch_name;
-        // $mem->save();
-
-        // MemTeam::create(['mlid'=>$mlid, 'pid'=>$mem->pid]);
+        $mem->save();
+        $pid = $mem->pid;
+        MemTeam::create(['mlid'=>$mlid, 'pid'=>$mem->pid]);
         $m = 'Y';
         $class="rounded";
 
         //**================****send mail */
-        $memapp = Memapp::where(['req_id'=>$req_id])->get();
+        $memapp = Memapp::where(['req_id'=>$req_id])->first();
 // dd($memapp[0]->newmem_name);
         //=======信件的內容(即表單填寫的資料)
-        $CCmail = 'ruth.yang@breadoflife.taipei';
+        // $CCmail = 'ruth.yang@breadoflife.taipei';
+        // $CCmail = 'young.ruth@gmail.com';
         //--------------------------------------
         //===寄件者
+        $ts = microtime();
+        $ts5 = substr($ts, -5);
         $from = ['email'=>'bolcc@green.mailcloud.tw',
         'name'=>'台北靈糧堂 牧養處',
-        'subject'=>'台北靈糧堂 「小組組員登錄」確認信'
+        'subject'=>'台北靈糧堂 「小組組員登錄」確認信'.$ts5
         ];
 
-        //======填寫收信人信箱
-        $email = $memapp[0]->leader_email;
-        $to = ['email' => $CCmail,//$email,
+        //======填寫 小組長 為收信人信箱 
+        $email = $memapp->leader_email;
+        if (preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) { 
+        }else{// email帳號不合理
+            $email = "ruth.yang@breadoflife.taipei";
+        }// 就不寄通知給小組長
+        
+        $to = ['email' => $email,
         'name'=> '小組長' /*,
-        'bcc'=>$CCmail*/];
-        $data = ['newmem_name' => $memapp[0]->newmem_name,
-            'leader_name' => $memapp[0]->leader_name
+    'bcc'=>$CCmail*/ ];// 此處密件寄送仍未成功
+
+        $data = ['newmem_name' => $memapp->newmem_name,
+            'leader_name' => $memapp->leader_name
         ];
         \Mail::send(['html' => 'emails.notice_mail'], $data,function ($message) use ($from, $to) {
             $message->from($from['email'], $from['name']);
@@ -211,9 +211,53 @@ class MemappController extends Controller
         });
         
         //=======================================
-        // $memapp->update(['answer'=>'Y', 'answer_ts'=>Carbon::now()]);
+        Memapp::where(['req_id'=>$req_id])->update(['answer'=>'Y', 'answer_ts'=>Carbon::now(), 'pid' => $pid]);
                 
         return view('Memapp.showMsg', compact('m', 'class'));
 
+    }
+    public function mailInvite(Request $request)
+    {//https://int.bolcc.tw/mem/user 小組組員 登錄邀請函
+        // 取代 https://int2.bolcc.tw/zMailer/memappMailer.php?req_id=915
+
+        $memapp = Memapp::where(['req_id'=>$request->req_id])->firstOrFail();
+        $tid=$memapp->tid;
+        $newmem_name=$memapp->newmem_name;
+        $leader_name=$memapp->leader_name;
+        $email=$memapp->newmem_email;
+
+        //===寄件者
+        $ts = microtime();
+        $ts5 = substr($ts, -5);
+        $from = ['email'=>'bolcc@green.mailcloud.tw',
+        'name'=>'台北靈糧堂 牧養處',
+        'subject'=>'台北靈糧堂 「小組組員登錄」邀請函'.$ts5
+        ];
+
+        //======填寫收信人信箱 
+        if (preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email)) { 
+        }else{// email帳號不合理
+            $email = "ruth.yang@breadoflife.taipei";
+        }// 就不寄通知給小組長
+        
+        $to = ['email' => $email,
+        'name'=> '小組組員' /*,
+    'bcc'=>$CCmail*/ ];// 此處密件寄送仍未成功
+        $ok_url ='https://int9.bolcc.taipei/services/memapp/'.$tid.'/g/'.$request->req_id;
+        $notok_url ='https://int9.bolcc.taipei/services/memapp/'.$tid.'/n/'.$request->req_id;
+
+        $data = ['newmem_name' => $newmem_name,
+            'leader_name' => $leader_name,
+            'ok_url' => $ok_url,
+            'notok_url' => $notok_url
+        ];
+        \Mail::send(['html' => 'emails.invite_mail'], $data,function ($message) use ($from, $to) {
+            $message->from($from['email'], $from['name']);
+            $message->to($to['email'], $to['name']);//->bcc($to['bcc']);
+            $message->subject($from['subject']);
+        });
+        
+                
+        return redirect('https://int.bolcc.tw/mem/user');
     }
 }

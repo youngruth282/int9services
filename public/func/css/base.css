@@ -1,0 +1,17 @@
+﻿body 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 30px;
+			}
+table 			{
+			FONT-FAMILY: 新細明體;
+			FONT-SIZE: 15px;
+			LETTER-SPACING: 1px;
+			LINE-HEIGHT: 22px;
+			}
+
+A:link 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:visited 			{COLOR: #0000FF; TEXT-DECORATION: none}
+A:active 			{TEXT-DECORATION: none}
+A:hover 			{COLOR: #FF0000; TEXT-DECORATION: underline}

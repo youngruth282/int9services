@@ -38,7 +38,7 @@ class SermonCTController extends Controller
                 $BString1 .= $wabible->schapter .'章'. $wabible->snumber .'~'.$wabible->schapter .'章 '. $wabible->enumber.'節 </b></font>';
 			}
 			foreach($ctexts as $ctext){
-				$bible_content[$i] = '<td><font color="#FF8040"><b>'. $ctext->chapter .' : '. $ctext->number .'</b></font></td>';
+				$bible_content[$i] = '<td nowrap><font color="#FF8040"><b>'. $ctext->chapter .' : '. $ctext->number .'</b></font></td>';
 				$bible_content[$i] .= '<td><font color="#EEE">'. nl2br($ctext->ctext) .'</font></td>';
 				$i++;
 			}

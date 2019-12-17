@@ -1,4 +1,5 @@
 <?php
+// 檢查課程是否可以報名
 // tran_deadline AS enrollment_end 報名截止日期
 namespace App;
 
